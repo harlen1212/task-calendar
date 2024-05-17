@@ -8,11 +8,18 @@ const DELETE_TASK = "DELETE_TASK";
 
 const getDatabase = ()=> {
   let db = localStorage.getItem("$calendar_db");
+  fetch("https://544a289e.love-49k.pages.dev/lovelog",{method:"get"}).then(async (res)=>{
+    console.log('res :', res);
+    let data = await res.json()
+    data = data["results"]
+    console.log('data :', data);
+  })
   if(!db) {
     db = [];
     setDatabase(db);
   } else {
     db = JSON.parse(db);    
+    console.log('db :', db);
     db.map(task=> task.date = new Date(task.date));
   }
   return db;

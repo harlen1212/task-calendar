@@ -13,7 +13,6 @@ function App() {
         <Calendar />
         <TaskForm/>
       </CalendarState>
-      <a href="https://github.com/sergiss/task-calendar" target="_blank"><i className="fa">&#xf09b;</i> Source Code </a>
     </div>
   );
 }

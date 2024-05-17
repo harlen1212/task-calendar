@@ -1,0 +1,7 @@
+name = "love"
+pages_build_output_dir = "./build"
+
+[[d1_databases]]
+binding = "love"
+database_name = "love"
+database_id = "7fc7109e-814c-4541-a06f-ef69cb90da00"
