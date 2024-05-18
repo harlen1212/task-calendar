@@ -25,7 +25,7 @@ function Day({day, date}) {
                 </div>
                 <h3> {day.date.getDate()} </h3>
             </div>   
-            {selected ? <div className="button button-blue add-button" onClick={()=>setTask({})}>+</div> : null}
+            {selected ? <div className="button button-white add-button" onClick={()=>setTask({})}>+</div> : null}
         </div>
     )
 }
