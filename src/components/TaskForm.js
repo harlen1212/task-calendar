@@ -48,14 +48,12 @@ function TaskForm() {
       name: name,
       color: color,
     });
-    setDate(date);
     closeModal();
 
   };
 
   const _deleteTask = ()=> {
     deleteTask(task.id);
-    setDate(date);
     closeModal();
     setError(false);
   }
