@@ -5,7 +5,7 @@ html {
 
 main {
   margin: 0;
-  /* background-color: #a9b9d1; */
+  background-color: #a9b9d1;
 
   display: table;
   position: absolute;
@@ -37,18 +37,20 @@ body {
 }
 
 
-#child {
+/* #child {
   position: fixed;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-}
+} */
 
-h4 {
+#title {
   font-family: "STKaiti";
   font-size: 40px;
   color: #f584b7;
+  margin: 0;
+  margin-right: auto;
 }
 
 #root {
@@ -184,7 +186,9 @@ header h1 {
 }
 
 .month {
-  flex: 1;
+  flex: 0.8 1;
+  display:flex;
+  align-items:center;
 }
 
 .nav {
