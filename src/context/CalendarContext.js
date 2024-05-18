@@ -8,7 +8,7 @@ const DELETE_TASK = "DELETE_TASK";
 
 
 const getAllRecords = async () => {
-  const res = await fetch("https://544a289e.love-49k.pages.dev/lovelog", { method: "get" })
+  const res = await fetch("/lovelog", { method: "get" })
   let data = await res.json();
   data = data["results"];
   data.map(task => task.date = new Date(task.date));
