@@ -65,7 +65,7 @@ header h1 {
 }
 
 .calendar {
-  background-color: #ffe5e9;
+  background-color: #ffffff;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(7, minmax(8px, 1fr));
@@ -166,7 +166,7 @@ header h1 {
 }
 
 .selected-day {
-  background-color: #ffbbd9;
+  background-color: #ffe7f1;
   opacity: 0.9;
 }
 
@@ -265,14 +265,14 @@ header h1 {
 }
 
 .button-pink {
-  background-color: #f79bc5;
+  background-color: #fff4f4;
   opacity: 0.9;
   color: black;
-  border: 2px solid #ed77ac;
+  border: 2px solid #ffb0d3;
 }
 
 .button-pink:hover {
-  background-color: #ed77ac;
+  background-color: #ffb0d3;
 }
 
 
@@ -302,7 +302,7 @@ header h1 {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  background-color: pink;
+  background-color: rgb(255, 255, 255);
   opacity: 0.95;
   border-radius: 20px;
   box-shadow: 5px 5px 8px gray;
