@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <title>相思&桃夭</title>
     <style type="text/css">
-        main {
+        #main {
             margin: 0;
             /* background-color: #a9b9d1; */
-            background-image: url("/bg.jpg");
             display: table;
             position: absolute;
             top: 0;
@@ -21,7 +20,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="main">
         <div id="root"></div>
     </main>
     <!-- <canvas id="canvas"></canvas>
@@ -280,5 +279,15 @@
         })(document.getElementById('pinkboard'));
     </script> -->
 </body>
+<script>
+    window.addEventListener('resize', function () {
+        var element = document.getElementById('main');
+        if (window.innerWidth < 768) {
+            element.style.backgroundImage = "url('bg-mobile.jpg')";
+        } else {
+            element.style.backgroundImage = "url('bg.jpg')";
+        }
+    });
+</script>
 
 </html>
