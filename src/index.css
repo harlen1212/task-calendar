@@ -3,17 +3,6 @@ html {
   height: 100%;
 }
 
-main {
-  margin: 0;
-  /* background-color: #a9b9d1; */
-  background-image: url("http://img.netbian.com/file/2024/0507/001024uMVZ9.jpg");
-  display: table;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
 
 body {
   margin: 0;
@@ -76,7 +65,7 @@ header h1 {
 }
 
 .calendar {
-  background-color: pink;
+  background-color: #ffe5e9;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(7, minmax(8px, 1fr));
@@ -177,7 +166,7 @@ header h1 {
 }
 
 .selected-day {
-  background-color: #f18eba;
+  background-color: #ffbbd9;
   opacity: 0.9;
 }
 
@@ -276,14 +265,14 @@ header h1 {
 }
 
 .button-pink {
-  background-color: #f584b7;
+  background-color: #f79bc5;
   opacity: 0.9;
   color: black;
-  border: 2px solid #e6619d;
+  border: 2px solid #ed77ac;
 }
 
 .button-pink:hover {
-  background-color: #f24492;
+  background-color: #ed77ac;
 }
 
 
