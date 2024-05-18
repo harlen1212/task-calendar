@@ -5,8 +5,8 @@ html {
 
 main {
   margin: 0;
-  background-color: #a9b9d1;
-
+  /* background-color: #a9b9d1; */
+  background-image: url("http://img.netbian.com/file/2024/0507/001024uMVZ9.jpg");
   display: table;
   position: absolute;
   top: 0;
