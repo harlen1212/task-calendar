@@ -1,6 +1,10 @@
 name = "love"
 pages_build_output_dir = "./build"
 
+kv_namespaces = [
+  { binding = "LOVE_KV", id = "a8c455688abb4c188012099d137de82b" }
+]
+
 [[d1_databases]]
 binding = "love"
 database_name = "love"
