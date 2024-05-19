@@ -42,7 +42,7 @@ const deleteRecord = async (id) => {
   return fetch('/lovelog', {
     method: 'delete',
     headers,
-    body: JSON.stringify({id})
+    body: JSON.stringify({ id })
   })
 }
 
@@ -57,9 +57,26 @@ export const sameDay = (a, b) => {
 
 function CalendarState(props) {
 
+  const initDate = new Date();
+  // Calendar Start Day
+  const d1 = new Date(initDate.getFullYear(), initDate.getMonth(), 1);
+  d1.setDate(d1.getDate() - (d1.getDay() === 0 ? 7 : d1.getDay()));
+  // Calendart End Day
+  const d2 = new Date(initDate.getFullYear(), initDate.getMonth() + 1, 0);
+  if (d2.getDay() !== 0) d2.setDate(d2.getDate() + (7 - d2.getDay()));
+
+  const initDays = [];
+  do { // Obtain tasks
+    d1.setDate(d1.getDate() + 1); // iterate            
+    initDays.push({
+      date: new Date(d1.getTime()),
+      tasks: []
+    });
+  } while (!sameDay(d1, d2));
+
   const initialState = {
     date: new Date(),
-    days: [],
+    days: initDays,
     task: null
   };
 
@@ -118,21 +135,21 @@ function CalendarState(props) {
   }
 
   const saveTask = (task) => {
-  console.log('task :', task);
+    console.log('task :', task);
     if (!task.id) { // new Task
       task.id = uuidv4();
-      insertRecord(task).then(res=>{
+      insertRecord(task).then(res => {
         setDate(state.date);
       });
-    }else{
-      updateRecord(task).then((res)=>{
+    } else {
+      updateRecord(task).then((res) => {
         setDate(state.date);
       });
     }
   }
 
   const deleteTask = (taskId) => {
-    deleteRecord(taskId).then(res=>{
+    deleteRecord(taskId).then(res => {
       setDate(state.date);
     })
   }

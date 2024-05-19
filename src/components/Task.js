@@ -6,7 +6,7 @@ function Task({task, style}) {
     const {setTask} = useContext(CalendarContext);
 
     return (
-        <p style={style} onClick={()=> {setTask(task)}}>{task.name}</p>
+        <p className='multi-line' style={style} onClick={()=> {setTask(task)}}>{task.name}</p>
     )
 }
 

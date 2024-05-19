@@ -70,7 +70,7 @@ function TaskForm() {
       <div className="task-form">
         
         <label>Name</label>
-        <input
+        <textarea
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
